@@ -7,13 +7,12 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   address: >
     <p>University of Birmingham</p>
     <p>Edgbaston</p>
-    <p>Birmingham</p>
+    <p>Birmingham, UK</p>
     <p>B15 2TT</p>
-    <p>UK</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
