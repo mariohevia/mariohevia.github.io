@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Mario Hevia Fajardo # the website title (if blank, full name will be used instead)
+title: Mario A. Hevia Fajardo # the website title (if blank, full name will be used instead)
 first_name: Mario
 middle_name: A.
 last_name: Hevia Fajardo
@@ -67,9 +67,9 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: mariohevia # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: # your Twitter handle
+twitter_username: @heviafam # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: # your LinkedIn user name
+linkedin_username: mario-hevia # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
@@ -85,7 +85,7 @@ work_url: https://www.birmingham.ac.uk/staff/profiles/computer-science/research-
 keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
-dblp_url: # your DBLP profile url
+dblp_url: https://dblp.org/pid/270/0626.html # your DBLP profile url
 stackoverflow_id: # your stackoverflow id
 kaggle_id: # your kaggle id
 lastfm_id: # your lastfm id
