@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.birmingham.ac.uk/index.aspx'>University of Birmingham</a>.
+subtitle: <a href='https://www.birmingham.ac.uk/index.aspx'>University of Birmingham.</a>
 
 profile:
   align: right
