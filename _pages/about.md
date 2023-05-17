@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
 subtitle: <a href='https://www.birmingham.ac.uk/index.aspx'>University of Birmingham.</a>
 
