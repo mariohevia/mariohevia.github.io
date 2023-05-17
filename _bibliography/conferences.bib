@@ -1,11 +1,119 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+
+@inproceedings{10.1145/3512290.3528781,
+author = {Hevia Fajardo, Mario Alejandro and Sudholt, Dirk},
+title = {Hard Problems Are Easier for Success-Based Parameter Control},
+year = {2022},
+isbn = {9781450392372},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3512290.3528781},
+doi = {10.1145/3512290.3528781},
+abstract = {Recent works showed that simple success-based rules for self-adjusting parameters 
+in evolutionary algorithms (EAs) can match or outperform the best fixed parameters on discrete 
+problems. Non-elitism in a (1, λ) EA combined with a self-adjusting of spring population size λ 
+outperforms common EAs on the multimodal Cliff problem. However, it was shown that this only 
+holds if the success rate λ that governs self-adjustment is small enough. Otherwise, even on 
+OneMax, the self-adjusting (1, λ) EA stagnates on an easy slope, where frequent successes drive 
+down the of spring population size.We show that self-adjustment works as intended in the absence 
+of easy slopes. We define everywhere hard functions, for which successes are never easy to find 
+and show that the self-adjusting (1, λ) EA is robust with respect to the choice of success rates 
+λ. We give a general fitness-level upper bound on the number of evaluations and show that the 
+expected number of generations is at most O(d+log(1/p<sup>+</sup><sub>min</sub>)) where d is the number of non-optimal fitness 
+values and p<sup>+</sup><sub>min</sub> is the smallest probability of finding an improvement from a non-optimal 
+search point. We discuss implications for the everywhere hard function LeadingOnes and a new 
+class OneMaxBlocks of everywhere hard functions with tunable difficulty.},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+pages = {796–804},
+numpages = {9},
+keywords = {parameter control, runtime analysis, drift analysis, theory, non-elitism},
+location = {Boston, Massachusetts},
+series = {GECCO '22},
+abbr={GECCO},
+selected={false},
+bibtex_show={true},
+is_book={false},
+is_journal={false},
+is_conference = {true}
+}
+
+@inproceedings{10.1145/3450218.3477306,
+author = {Hevia Fajardo, Mario Alejandro and Sudholt, Dirk},
+title = {Self-Adjusting Offspring Population Sizes Outperform Fixed Parameters on the Cliff Function},
+year = {2021},
+isbn = {9781450383523},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3450218.3477306},
+doi = {10.1145/3450218.3477306},
+abstract = {In the discrete domain, self-adjusting parameters of evolutionary algorithms (EAs) 
+has emerged as a fruitful research area with many runtime analyses showing that self-adjusting 
+parameters can out-perform the best fixed parameters. Most existing runtime analyses focus on 
+elitist EAs on simple problems, for which moderate performance gains were shown. Here we consider 
+a much more challenging scenario: the multimodal function Cliff, defined as an example where a 
+(1, λ) EA is effective, and for which the best known upper runtime bound for standard EAs is O(n<sup>25</sup>).
+We prove that a (1, λ) EA self-adjusting the offspring population size λ using success-based rules 
+optimises Cliff in O(n) expected generations and O(n log n) expected evaluations. Along the way, 
+we prove tight upper and lower bounds on the runtime for fixed λ (up to a logarithmic factor) and 
+identify the runtime for the best fixed λ as nη for η ≈ 3.9767 (up to sub-polynomial factors). 
+Hence, the self-adjusting (1, λ) EA outperforms the best fixed parameter by a factor of at least 
+n<sup>2.9767</sup> (up to sub-polynomial factors).},
+booktitle = {Proceedings of the 16th ACM/SIGEVO Conference on Foundations of Genetic Algorithms},
+articleno = {5},
+numpages = {15},
+keywords = {drift analysis, parameter control, non-elitism, runtime analysis, multimodal optimisation},
+location = {Virtual Event, Austria},
+series = {FOGA '21},
+abbr={FOGA},
+selected={true},
+bibtex_show={true},
+is_book={false},
+is_journal={false},
+is_conference = {true}
+}
+
+@inproceedings{10.1145/3449639.3459338,
+author = {Hevia Fajardo, Mario Alejandro and Sudholt, Dirk},
+title = {Self-Adjusting Population Sizes for Non-Elitist Evolutionary Algorithms: Why Success Rates Matter},
+year = {2021},
+isbn = {9781450383509},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3449639.3459338},
+doi = {10.1145/3449639.3459338},
+abstract = {Recent theoretical studies have shown that self-adjusting mechanisms can provably 
+outperform the best static parameters in evolutionary algorithms on discrete problems. 
+However, the majority of these studies concerned elitist algorithms and we do not have a 
+clear answer on whether the same mechanisms can be applied for non-elitist algorithms. We 
+study one of the best-known parameter control mechanisms, the one-fifth success rule, to 
+control the offspring population size λ in the non-elitist (1, λ) EA. It is known that the 
+(1, λ) EA has a sharp threshold with respect to the choice of λ where the runtime on OneMax 
+changes from polynomial to exponential time. Hence, it is not clear whether parameter 
+control mechanisms are able to find and maintain suitable values of λ. We show that the 
+answer crucially depends on the success rate s (i. e. a one-(s + 1)-th success rule). We 
+prove that, if the success rate is appropriately small, the self-adjusting (1, λ) EA 
+optimises OneMax in O(n) expected generations and O(n log n) expected evaluations. A small 
+success rate is crucial: we also show that if the success rate is too large, the algorithm 
+has an exponential runtime on OneMax.},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+pages = {1151–1159},
+numpages = {9},
+keywords = {drift analysis, parameter control, evolutionary algorithms, runtime analysis, non-elitism, theory},
+location = {Lille, France},
+series = {GECCO '21},
+abbr={GECCO},
+selected={true},
+bibtex_show={true},
+is_book={false},
+is_journal={false},
+is_conference = {true}
+}
 
 @inproceedings{10.1145/3377930.3390200,
 author = {Hevia Fajardo, Mario Alejandro and Sudholt, Dirk},
-title = {asdf On the Choice of the Parameter Control Mechanism in the $(1+(\lambda, \lambda))$ Genetic Algorithm},
+title = {On the Choice of the Parameter Control Mechanism in the $(1+(\lambda, \lambda))$ Genetic Algorithm},
 year = {2020},
 isbn = {9781450371285},
 publisher = {Association for Computing Machinery},
@@ -17,32 +125,35 @@ with a good fitness-distance correlation as in OneMax. It uses a parameter contr
 mechanism for the parameter λ that governs the mutation strength and the number of
 offspring. However, on multimodal problems, the parameter control mechanism tends
 to increase λ uncontrollably.We study this problem and possible solutions to it using
-rigorous runtime analysis for the standard Jumpk benchmark problem class. The original
+rigorous runtime analysis for the standard Jump<sub>k</sub> benchmark problem class. The original
 algorithm behaves like a (1+n) EA whenever the maximum value λ = n is reached. This
 is ineffective for problems where large jumps are required. Capping λ at smaller values
 is beneficial for such problems. Finally, resetting λ to 1 allows the parameter to
 cycle through the parameter space. We show that this strategy is effective for all
-Jumpk problems: the (1 + (λ, λ)) GA performs as well as the (1 + 1) EA with the optimal
-mutation rate and fast evolutionary algorithms, apart from a small polynomial overhead.Along
+Jump<sub>k</sub> problems: the (1 + (λ, λ)) GA performs as well as the (1 + 1) EA with the optimal
+mutation rate and fast evolutionary algorithms, apart from a small polynomial overhead. Along
 the way, we present new general methods for bounding the runtime of the (1 + (λ, λ))
 GA that allows to translate existing runtime bounds from the (1 + 1) EA to the self-adjusting
 (1 + (λ, λ)) GA. Our methods are easy to use and give upper bounds for novel classes
 of functions.},
-booktitle = {Proceedings of the 2020 Genetic and Evolutionary Computation Conference},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
 pages = {832–840},
 numpages = {9},
 keywords = {theory, runtime analysis, parameter control},
 location = {Canc\'{u}n, Mexico},
 series = {GECCO '20},
-book={false},
-journal={false},
-conference = {true}
+abbr={GECCO},
+bibtex_show={true},
+selected={false},
+is_book={false},
+is_journal={false},
+is_conference = {true}
 }
 
 
 @inproceedings{10.1145/3321707.3321858,
 author = {Hevia Fajardo, Mario Alejandro},
-title = {afsdf An Empirical Evaluation of Success-Based Parameter Control Mechanisms for Evolutionary Algorithms},
+title = {An Empirical Evaluation of Success-Based Parameter Control Mechanisms for Evolutionary Algorithms},
 year = {2019},
 isbn = {9781450361118},
 publisher = {Association for Computing Machinery},
@@ -70,21 +181,10 @@ numpages = {9},
 keywords = {parameter selection, empirical study, parameter control, success-based, genetic algorithms},
 location = {Prague, Czech Republic},
 series = {GECCO '19},
-preview={},
-html={},
-arxiv={},
-video={},
-pdf={},
-supp={},
-blog={},
-code={},
-poster={},
-slides={},
-website={},
 abbr={GECCO},
 bibtex_show={true},
-selected={true},
-book={false},
-journal={false},
-conference = {true}
+selected={false},
+is_book={false},
+is_journal={false},
+is_conference = {true}
 }

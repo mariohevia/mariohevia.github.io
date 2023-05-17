@@ -3,43 +3,6 @@
 
 @string{aps = {American Physical Society,}}
 
-@inproceedings{10.1145/3377930.3390200,
-author = {Hevia Fajardo, Mario Alejandro and Sudholt, Dirk},
-title = {On the Choice of the Parameter Control Mechanism in the $(1+(\lambda, \lambda))$ Genetic Algorithm},
-year = {2020},
-isbn = {9781450371285},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3377930.3390200},
-doi = {10.1145/3377930.3390200},
-abstract = {The self-adjusting (1 + (λ, λ)) GA is the best known genetic algorithm for problems
-with a good fitness-distance correlation as in OneMax. It uses a parameter control
-mechanism for the parameter λ that governs the mutation strength and the number of
-offspring. However, on multimodal problems, the parameter control mechanism tends
-to increase λ uncontrollably.We study this problem and possible solutions to it using
-rigorous runtime analysis for the standard Jumpk benchmark problem class. The original
-algorithm behaves like a (1+n) EA whenever the maximum value λ = n is reached. This
-is ineffective for problems where large jumps are required. Capping λ at smaller values
-is beneficial for such problems. Finally, resetting λ to 1 allows the parameter to
-cycle through the parameter space. We show that this strategy is effective for all
-Jumpk problems: the (1 + (λ, λ)) GA performs as well as the (1 + 1) EA with the optimal
-mutation rate and fast evolutionary algorithms, apart from a small polynomial overhead.Along
-the way, we present new general methods for bounding the runtime of the (1 + (λ, λ))
-GA that allows to translate existing runtime bounds from the (1 + 1) EA to the self-adjusting
-(1 + (λ, λ)) GA. Our methods are easy to use and give upper bounds for novel classes
-of functions.},
-booktitle = {Proceedings of the 2020 Genetic and Evolutionary Computation Conference},
-pages = {832–840},
-numpages = {9},
-keywords = {theory, runtime analysis, parameter control},
-location = {Canc\'{u}n, Mexico},
-series = {GECCO '20},
-book={false},
-journal={false},
-conference = {true}
-}
-
-
 @inproceedings{10.1145/3321707.3321858,
 author = {Hevia Fajardo, Mario Alejandro},
 title = {An Empirical Evaluation of Success-Based Parameter Control Mechanisms for Evolutionary Algorithms},
@@ -83,8 +46,8 @@ slides={},
 website={},
 abbr={GECCO},
 bibtex_show={true},
-selected={true},
-book={false},
-journal={false},
-conference = {true}
+selected={false},
+is_book={false},
+is_journal={false},
+is_conference = {true}
 }
