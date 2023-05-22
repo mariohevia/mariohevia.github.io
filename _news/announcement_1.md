@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2023-05-24
 inline: true
 ---
 
-A simple inline announcement.
+Happy to be part of the Program Committee of the <a href="https://uk-ai.org/ukai2023/" target="_blank">UK AI Fellows Conference</a>.

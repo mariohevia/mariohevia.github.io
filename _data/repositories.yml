@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - mariohevia
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - mariohevia/mariohevia.github.io
+  - mariohevia/Parameter-Control-Mechanisms-Genetic-Algorithm
+  - mariohevia/comparison-evolutionary-algorithms
+  - mariohevia/cwi-mariohevia
