@@ -4,13 +4,6 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
         <div class="container">
-          <a class="navbar-icon" href="{{ site.baseurl }}/">
-            {%- include figure.html
-              path="assets/img/icon.png"
-              alt="Mario Hevia icon" 
-              width=28
-              -%}
-          </a>
           <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
             {%- if site.title == "blank" -%}
               {%- if site.first_name -%}
