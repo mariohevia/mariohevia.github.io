@@ -146,19 +146,19 @@ blockquote {
   background-color: var(--global-navbar-bg-color);
   border: 1px solid var(--global-divider-color);
   a:not(.active) {
-    color: var(--global-text-color);
+    color: var(--global-navbar-text-color);
   }
   a:hover {
-    color: var(--global-hover-color);
+    color: var(--global-navbar-hover-color);
   }
   .dropdown-divider {
     border-top: 1px solid var(--global-divider-color) !important;
   }
 }
 .dropdown-item {
-  color: var(--global-text-color);
+  color: var(--global-navbar-text-color);
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-navbar-hover-color);
       background-color: var(--global-navbar-bg-color);
     }
 }
@@ -172,17 +172,17 @@ blockquote {
     color: var(--global-text-color);
   }
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    color: var(--global-navbar-text-color);
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-navbar-hover-color);
     }
   }
   .navbar-nav .nav-item.active>.nav-link {
       background-color: inherit;
       font-weight: bolder;
-      color: var(--global-theme-color);
+      color: var(--global-navbar-theme-color);
       &:hover {
-        color: var(--global-hover-color);
+        color: var(--global-navbar-hover-color);
       }
   }
   .navbar-brand.social {
@@ -191,12 +191,12 @@ blockquote {
     font-size: 1.7rem;
     a {
       i::before {
-        color: var(--global-text-color);
+        color: var(--global-navbar-text-color);
         transition-property: all 0.2s ease-in-out;
       }
       &:hover {
         i::before {
-          color: var(--global-theme-color);
+          color: var(--global-navbar-theme-color);
         }
       }
     }
@@ -251,9 +251,9 @@ blockquote {
   padding: 0;
   border: 0;
   background-color: inherit;
-  color: var(--global-text-color);
+  color: var(--global-navbar-text-color);
   &:hover {
-    color: var(--global-hover-color);
+    color: var(--global-navbar-hover-color);
   }
 }
 
@@ -343,8 +343,12 @@ footer.sticky-bottom {
   padding-top: 2rem;
   padding-bottom: 3rem;
   h1 {
-    color: var(--global-theme-color);
+    color: var(--global-text-color);
     font-size: 5rem;
+  }
+  h2 {
+    color: var(--global-unfocused-text-color);
+    font-size: 2rem;
   }
 }
 
@@ -475,7 +479,7 @@ footer.sticky-bottom {
 .publications {
   margin-top: 2rem;
   h1 {
-    color: var(--global-theme-color);
+    color: var(--global-text-color);
     font-size: 2rem;
     text-align: center;
     margin-top: 1em;
