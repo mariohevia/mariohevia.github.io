@@ -14,7 +14,7 @@
     - title: Evolutionary computation
       items:
         - Evolutionary Algorithms
-        - Competitive Co-Evolutionary Algorithms
+        - Competitive Coevolutionary Algorithms
         - Runtime analysis
     - title: Black-box optimisation
     - title: Combinatorial optimisation
@@ -26,7 +26,7 @@
       institution: University of Birmingham, Birmingham, UK.
       year: 2022 - Present
       description:
-        - Turing AI Acceleration fellowship project on co-evolution.
+        - Turing AI Acceleration fellowship project on coevolution.
 
     - title: Graduate Teaching Assistant
       institution: University of Sheffield, Sheffield, UK.
@@ -138,15 +138,21 @@
 - title: Professional Activities
   type: time_table
   contents:
+    - title: Organising Committees
+      items:
+        - <a href="https://uk-ai.org/ukai2023/" title="UK AI Conference 2023">UK AI Conference 2023</a>
     - title: Reviewer for journals
       items:
         - Information Sciences
         - Theoretical Computer Science
         - IEEE Transactions on Evolutionary Computation
+    - title: Program Committee Memberships
+      items: Genetic and Evolutionary Computation Conference (GECCO) 2023
 
 - title: Other Interests
   type: list
   contents:
     - AI for videogames
+    - Quantum computing
     - Astrophysics
     - History of life on Earth

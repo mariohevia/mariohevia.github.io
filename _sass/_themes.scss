@@ -8,11 +8,11 @@
   --global-text-color: #{$black-color};
   --global-unfocused-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$new-purple-color};
+  --global-hover-color: #{$new-purple-color};
   --global-navbar-text-color: #{$black-color};
-  --global-navbar-hover-color: #{$purple-color};
-  --global-navbar-theme-color: #{$purple-color};
+  --global-navbar-hover-color: #{$new-purple-color};
+  --global-navbar-theme-color: #{$new-purple-color};
   --global-navbar-bg-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
@@ -47,8 +47,8 @@ html[data-theme='dark'] {
   --global-navbar-text-color: #{$grey-color};
   --global-navbar-hover-color: #{$grey-color-light};
   --global-navbar-theme-color: #{$grey-color-light};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-theme-color: #{$new-light-purple-color};
+  --global-hover-color: #{$new-light-purple-color};
   --global-navbar-bg-color: #{$grey-color-dark};
   --global-footer-bg-color: #{$grey-color-light};
   --global-footer-text-color: #{$grey-color-dark};
