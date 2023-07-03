@@ -151,28 +151,28 @@
             {% if entry.video contains '://' -%}
             <a href="{{ entry.video }}" class="btn btn-sm z-depth-0" role="button">Video</a>
             {%- else -%}
-            <a href="{{ entry.video | prepend: '/assets/video/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Video</a>
+            <a href="{{ entry.video | prepend: '/assets/video/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">Video</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.talk %}
             {% if entry.talk contains '://' -%}
             <a href="{{ entry.talk }}" class="btn btn-sm z-depth-0" role="button">Talk</a>
             {%- else -%}
-            <a href="{{ entry.talk | prepend: '/assets/video/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Talk</a>
+            <a href="{{ entry.talk | prepend: '/assets/video/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">Talk</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.pdf %}
             {% if entry.pdf contains '://' -%}
-            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">PDF</a>
             {%- else -%}
-            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">PDF</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.supp %}
             {% if entry.supp contains '://' -%}
             <a href="{{ entry.supp }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
             {%- else -%}
-            <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
+            <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">Supp</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.blog %}
@@ -185,14 +185,14 @@
             {% if entry.poster contains '://' -%}
             <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
             {%- else -%}
-            <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+            <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">Poster</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.slides %}
             {% if entry.slides contains '://' -%}
-            <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+            <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">Slides</a>
             {%- else -%}
-            <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+            <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target = "_blank">Slides</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.website %}
