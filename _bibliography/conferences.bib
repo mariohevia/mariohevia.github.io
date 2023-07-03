@@ -17,7 +17,7 @@ problems. Non-elitism in a (1, λ) EA combined with a self-adjusting of spring p
 outperforms common EAs on the multimodal Cliff problem. However, it was shown that this only 
 holds if the success rate λ that governs self-adjustment is small enough. Otherwise, even on 
 OneMax, the self-adjusting (1, λ) EA stagnates on an easy slope, where frequent successes drive 
-down the of spring population size.We show that self-adjustment works as intended in the absence 
+down the of spring population size. <br>We show that self-adjustment works as intended in the absence 
 of easy slopes. We define everywhere hard functions, for which successes are never easy to find 
 and show that the self-adjusting (1, λ) EA is robust with respect to the choice of success rates 
 λ. We give a general fitness-level upper bound on the number of evaluations and show that the 
@@ -38,6 +38,8 @@ is_book={false},
 is_journal={false},
 is_conference = {true},
 pdf = {HardProblems.pdf},
+talk = {https://vimeo.com/723767059},
+html = {https://doi.org/10.1145/3512290.3528781},
 }
 
 @inproceedings{10.1145/3450218.3477306,
@@ -72,7 +74,9 @@ selected={true},
 bibtex_show={true},
 is_book={false},
 is_journal={false},
-is_conference = {true}
+is_conference = {true},
+pdf = {saocl_cliff.pdf},
+html = {https://doi.org/10.1145/3450218.3477306},
 }
 
 @inproceedings{10.1145/3449639.3459338,
@@ -87,12 +91,12 @@ doi = {10.1145/3449639.3459338},
 abstract = {Recent theoretical studies have shown that self-adjusting mechanisms can provably 
 outperform the best static parameters in evolutionary algorithms on discrete problems. 
 However, the majority of these studies concerned elitist algorithms and we do not have a 
-clear answer on whether the same mechanisms can be applied for non-elitist algorithms. We 
+clear answer on whether the same mechanisms can be applied for non-elitist algorithms. <br>We 
 study one of the best-known parameter control mechanisms, the one-fifth success rule, to 
 control the offspring population size λ in the non-elitist (1, λ) EA. It is known that the 
 (1, λ) EA has a sharp threshold with respect to the choice of λ where the runtime on OneMax 
 changes from polynomial to exponential time. Hence, it is not clear whether parameter 
-control mechanisms are able to find and maintain suitable values of λ. We show that the 
+control mechanisms are able to find and maintain suitable values of λ. <br>We show that the 
 answer crucially depends on the success rate s (i. e. a one-(s + 1)-th success rule). We 
 prove that, if the success rate is appropriately small, the self-adjusting (1, λ) EA 
 optimises OneMax in O(n) expected generations and O(n log n) expected evaluations. A small 
@@ -111,7 +115,8 @@ is_book={false},
 is_journal={false},
 is_conference = {true},
 talk = {https://www.youtube.com/watch?v=JZ6xmauh8g8},
-pdf = {SuccessRatesMatter.pdf}
+pdf = {SuccessRatesMatter.pdf},
+html = {https://doi.org/10.1145/3449639.3459338},
 }
 
 @inproceedings{10.1145/3377930.3390200,
@@ -150,7 +155,9 @@ bibtex_show={true},
 selected={false},
 is_book={false},
 is_journal={false},
-is_conference = {true}
+is_conference = {true},
+pdf = {oplcl_conference.pdf},
+html = {https://doi.org/10.1145/3377930.3390200},
 }
 
 
@@ -189,5 +196,7 @@ bibtex_show={true},
 selected={false},
 is_book={false},
 is_journal={false},
-is_conference = {true}
+is_conference = {true},
+pdf = {empirical_sa_ea.pdf},
+html = {https://doi.org/10.1145/3321707.3321858},
 }

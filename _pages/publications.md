@@ -15,6 +15,9 @@ nav_order: 1
 
 <h1>Conferences (peer reviewed)</h1>
 {% bibliography -f conferences %}
+
+<h1>Thesis</h1>
+{% bibliography -f theses %}
 <!-- -q @*[year={{y}}]* -->
 
 </div>
