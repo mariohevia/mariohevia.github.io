@@ -1,6 +1,68 @@
 ---
 ---
 
+@inproceedings{10.1145/3583131.3590506,
+author = {Hevia Fajardo, Mario Alejandro and Lehre, Per Kristian},
+title = {How Fitness Aggregation Methods Affect the Performance of Competitive CoEAs on Bilinear Problems},
+year = {2023},
+isbn = {9798400701191},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3583131.3590506},
+doi = {10.1145/3583131.3590506},
+abstract = {Competitive co-evolutionary algorithms (CoEAs) do not rely solely on an external function to assign fitness values to sampled solutions. Instead, they use the aggregation of outcomes from interactions between competing solutions allowing to rank solutions and make selection decisions. This makes CoEAs a useful tool for optimisation problems that have intrinsically interactive domains.Over the past decades, many ways to aggregate the outcomes of interactions have been considered. At the moment, it is unclear which of these is the best choice. Previous research is fragmented and most of the fitness aggregation methods (fitness measures) proposed have only been studied empirically.We argue that a proper understanding of the dynamics of CoEAs and their fitness measures can only be achieved through rigorous analysis of their behaviour. In this work we make a step towards this goal by using runtime analysis to study two commonly used fitness measures. We show a dichotomy in the behaviour of a (1, Λ) CoEA when optimising a Bilinear problem. The algorithm finds a Nash equilibrium efficiently if the worst interaction is used as a fitness measure but it takes exponential time w.o.p. if the average of all interactions is used instead.},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+pages = {1593–1601},
+numpages = {9},
+keywords = {maximin optimisation, runtime analysis, competitive coevolution},
+location = {Lisbon, Portugal},
+series = {GECCO '23},
+abbr={GECCO},
+selected={false},
+bibtex_show={true},
+is_book={false},
+is_journal={false},
+is_conference = {true},
+pdf = {oclcoea.pdf},
+supp = {oclcoeaSupp.pdf},
+html = {https://doi.org/10.1145/3583131.3590506},
+}
+
+@inproceedings{10.1145/3583131.3590411,
+author = {Lehre, Per Kristian and Hevia Fajardo, Mario and Toutouh, Jamal and Hemberg, Erik and O'Reilly, Una-May},
+title = {Analysis of a Pairwise Dominance Coevolutionary Algorithm And DefendIt},
+year = {2023},
+isbn = {9798400701191},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3583131.3590411},
+doi = {10.1145/3583131.3590411},
+abstract = {While competitive coevolutionary algorithms are ideally suited to model adversarial
+ dynamics, their complexity makes it difficult to understand what is happening when they execute. 
+ To achieve better clarity, we introduce a game named DefendIt and explore a previously developed 
+ pairwise dominance coevolutionary algorithm named PDCoEA. We devise a methodology for consistent 
+ algorithm comparison, then use it to empirically study the impact of population size, the impact 
+ of relative budget limits between the defender and attacker, and the impact of mutation rates on 
+ the dynamics and payoffs. Our methodology provides reliable comparisons and records of run and 
+ multi-run dynamics. Our supplementary material also offers enticing and detailed animations of a 
+ pair of players' game moves over the course of a game of millions of moves matched to the same 
+ run's populations' payoffs.},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+pages = {1027–1035},
+numpages = {9},
+keywords = {evolutionary algorithms, co-evolution, cyber security},
+location = {Lisbon, Portugal},
+series = {GECCO '23},
+abbr={GECCO},
+selected={false},
+bibtex_show={true},
+is_book={false},
+is_journal={false},
+is_conference = {true},
+pdf = {DefendIt.pdf},
+supp = {DefendItSupp.zip},
+html = {https://doi.org/10.1145/3583131.3590411},
+}
 
 @inproceedings{10.1145/3512290.3528781,
 author = {Hevia Fajardo, Mario Alejandro and Sudholt, Dirk},
