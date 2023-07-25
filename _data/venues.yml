@@ -1,6 +1,9 @@
 "TELO":
   url: https://dl.acm.org/journal/telo
   color: "#b580d1"
+"ALGOEJ":
+  url: https://www.springer.com/journal/453
+  color: "#910951"
 "GECCO":
   color: "#8054cc" 
 "FOGA":
