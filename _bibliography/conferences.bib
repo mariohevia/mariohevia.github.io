@@ -10,7 +10,21 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3594805.3607132},
 doi = {10.1145/3594805.3607132},
-abstract = {Co-evolutionary algorithms have found several applications in game-theoretic applications and optimisation problems with an adversary, particularly where the strategy space is discrete and exponentially large, and where classical game-theoretic methods fail. However, the application of co-evolutionary algorithms is difficult because they often display pathological behaviour, such as cyclic behaviour and evolutionary forgetting. These challenges have prevented the broad application of co-evolutionary algorithms.We derive, via rigorous mathematical methods, bounds on the expected time of a simple co-evolutionary algorithm until it discovers a Maximin-solution on the pseudo-Boolean Bilinear problem. Despite the intransitive nature of the problem leading to a cyclic behaviour of the algorithm, we prove that the algorithm obtains the Maximin-solution in expected O(n1.5) time.However, we also show that the algorithm quickly forgets the Maximin-solution and moves away from it. These results in a large total regret of Θ(Tn1.5) after T iterations. Finally, we show that using a simple archive solves this problem reducing the total regret significantly.Along the way, we present new mathematical tools to compute the expected time for co-evolutionary algorithms to obtain a Maximin-solution. We are confident that these tools can help further advance runtime analysis in both co-evolutionary and evolutionary algorithms.},
+abstract = {Co-evolutionary algorithms have found several applications in game-theoretic applications 
+and optimisation problems with an adversary, particularly where the strategy space is discrete and 
+exponentially large, and where classical game-theoretic methods fail. However, the application of 
+co-evolutionary algorithms is difficult because they often display pathological behaviour, such as 
+cyclic behaviour and evolutionary forgetting. These challenges have prevented the broad application 
+of co-evolutionary algorithms. <br>We derive, via rigorous mathematical methods, bounds on the expected time 
+of a simple co-evolutionary algorithm until it discovers a Maximin-solution on the pseudo-Boolean 
+Bilinear problem. Despite the intransitive nature of the problem leading to a cyclic behaviour of the 
+algorithm, we prove that the algorithm obtains the Maximin-solution in expected O(n<sup>1.5</sup>) time. <br>However, we 
+also show that the algorithm quickly forgets the Maximin-solution and moves away from it. These results 
+in a large total regret of Θ(Tn<sup>1.5</sup>) after T iterations. Finally, we show that using a simple archive 
+solves this problem reducing the total regret significantly.Along the way, we present new mathematical 
+tools to compute the expected time for co-evolutionary algorithms to obtain a Maximin-solution. We are 
+confident that these tools can help further advance runtime analysis in both co-evolutionary and 
+evolutionary algorithms.},
 booktitle = {Proceedings of the 17th ACM/SIGEVO Conference on Foundations of Genetic Algorithms},
 pages = {73–83},
 numpages = {11},
@@ -35,7 +49,20 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3583131.3590506},
 doi = {10.1145/3583131.3590506},
-abstract = {Competitive co-evolutionary algorithms (CoEAs) do not rely solely on an external function to assign fitness values to sampled solutions. Instead, they use the aggregation of outcomes from interactions between competing solutions allowing to rank solutions and make selection decisions. This makes CoEAs a useful tool for optimisation problems that have intrinsically interactive domains.Over the past decades, many ways to aggregate the outcomes of interactions have been considered. At the moment, it is unclear which of these is the best choice. Previous research is fragmented and most of the fitness aggregation methods (fitness measures) proposed have only been studied empirically.We argue that a proper understanding of the dynamics of CoEAs and their fitness measures can only be achieved through rigorous analysis of their behaviour. In this work we make a step towards this goal by using runtime analysis to study two commonly used fitness measures. We show a dichotomy in the behaviour of a (1, Λ) CoEA when optimising a Bilinear problem. The algorithm finds a Nash equilibrium efficiently if the worst interaction is used as a fitness measure but it takes exponential time w.o.p. if the average of all interactions is used instead.},
+abstract = {Competitive co-evolutionary algorithms (CoEAs) do not rely solely on an external 
+function to assign fitness values to sampled solutions. Instead, they use the aggregation of 
+outcomes from interactions between competing solutions allowing to rank solutions and make 
+selection decisions. This makes CoEAs a useful tool for optimisation problems that have 
+intrinsically interactive domains.Over the past decades, many ways to aggregate the outcomes of 
+interactions have been considered. At the moment, it is unclear which of these is the best choice. 
+Previous research is fragmented and most of the fitness aggregation methods (fitness measures) 
+proposed have only been studied empirically. <br>We argue that a proper understanding of the dynamics of 
+CoEAs and their fitness measures can only be achieved through rigorous analysis of their behaviour. 
+In this work we make a step towards this goal by using runtime analysis to study two commonly used 
+fitness measures. We show a dichotomy in the behaviour of a (1, λ) CoEA when optimising a Bilinear 
+problem. The algorithm finds a Nash equilibrium efficiently if the worst interaction is used as a 
+fitness measure but it takes exponential time w.o.p. if the average of all interactions is used 
+instead.},
 booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
 pages = {1593–1601},
 numpages = {9},
