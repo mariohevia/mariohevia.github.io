@@ -4,6 +4,9 @@
 "ALGOEJ":
   url: https://www.springer.com/journal/453
   color: "#910951"
+"AIJ":
+  url: https://www.sciencedirect.com/journal/artificial-intelligence
+  color: "#EB5536"
 "GECCO":
   color: "#8054cc" 
 "FOGA":
