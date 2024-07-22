@@ -11,5 +11,5 @@ I presented the joint work <a href="https://doi.org/10.1145/3638529.3654132" tar
 
  &nbsp;
 <div align="center">
-{% include figure.html path="assets/img/news/GECCO2024.jpg" title="GECCO 2024" width="480" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/news/GECCO2024.png" title="GECCO 2024" width="480" class="img-fluid rounded z-depth-1" %}
 </div>
