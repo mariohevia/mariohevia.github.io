@@ -5,3 +5,15 @@
 "Lehre":
   - firstname: ["Per Kristian", "P. K."]
     url: https://www.cs.bham.ac.uk/~lehrepk/
+
+"Hember":
+  - firstname: ["Erik", "E."]
+    url: https://alfagroup.csail.mit.edu/erik
+
+"Toutouh":
+  - firstname: ["Jamal", "J."]
+    url: http://www.jamal.es/
+
+"O'Reilly":
+  - firstname: ["Una-May", "U.", "U. M."]
+    url: https://www.csail.mit.edu/person/una-may-oreilly
