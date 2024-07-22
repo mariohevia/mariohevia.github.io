@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2024-07-24
+date: 2024-07-18
 inline: false
 title: GECCO Conference 2024
 ---
