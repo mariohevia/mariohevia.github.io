@@ -1,8 +1,8 @@
 ---
 layout: distill
-title: a distill-style blog post
-description: an example of a distill-style blog post and main elements
-giscus_comments: true
+title: Ranking Diversity Benefits CoEAs on an Intransitive Game
+description: Introducing ranking diversity for competitive coevolutionary algorithms
+giscus_comments: false
 date: 2024-09-16
 
 authors:
