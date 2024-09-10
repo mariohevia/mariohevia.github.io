@@ -3,7 +3,7 @@ layout: distill
 title: Ranking Diversity Benefits CoEAs on an Intransitive Game
 description: Introducing ranking diversity for competitive coevolutionary algorithms
 giscus_comments: false
-date: 2024-09-16
+date: 2024-09-09
 
 authors:
   - name: Mario A. Hevia Fajardo
