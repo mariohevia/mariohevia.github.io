@@ -15,7 +15,7 @@ authors:
     affiliations:
       name: University of Birmingham, Birmingham
 
-bibliography: 2018-12-22-distill.bib
+# bibliography: 2018-12-22-distill.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
