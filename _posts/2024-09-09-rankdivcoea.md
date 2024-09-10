@@ -124,7 +124,7 @@ function(x) {
 One run
 
 <div class="l-page">
-  <iframe src="{{ '/assets/plotly/rankdivcoea.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
+  <iframe src="{{ '/assets/plotly/rankdivcoea_animation.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="80%" style="border: 1px dashed grey;"></iframe>
 </div>
 
 <!-- The plot must be generated separately and saved into an HTML file.
