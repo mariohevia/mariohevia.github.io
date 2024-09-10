@@ -121,10 +121,9 @@ function(x) {
 
 ## RankDiv CoEA
 
-One run
 
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/rankdivcoea_animation.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="80%" style="border: 1px dashed grey;"></iframe>
+<div class="l-page" style="display: flex; justify-content: center; align-items: center;">
+  <iframe src="{{ '/assets/plotly/rankdivcoea_animation.html' | relative_url }}" frameborder='0' scrolling='no' height="550px" width="70%" style="border: 1px dashed grey;"></iframe>
 </div>
 
 <!-- The plot must be generated separately and saved into an HTML file.
