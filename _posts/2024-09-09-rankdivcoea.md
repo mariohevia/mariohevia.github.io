@@ -126,6 +126,15 @@ function(x) {
   <iframe src="{{ '/assets/plotly/rankdivcoea_animation.html' | relative_url }}" frameborder='0' scrolling='no' height="550px" width="70%" style="border: 1px dashed grey;"></iframe>
 </div>
 
+
+## PDCoEA
+
+
+<div class="l-page" style="display: flex; justify-content: center; align-items: center;">
+  <iframe src="{{ '/assets/plotly/pdcoea_animation.html' | relative_url }}" frameborder='0' scrolling='no' height="550px" width="70%" style="border: 1px dashed grey;"></iframe>
+</div>
+
+
 <!-- The plot must be generated separately and saved into an HTML file.
 To generate the plot that you see above, you can use the following code snippet:
 
