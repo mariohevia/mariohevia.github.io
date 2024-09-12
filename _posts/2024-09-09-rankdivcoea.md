@@ -24,17 +24,8 @@ authors:
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  # - name: Equations
-    # if a section has subsections, you can add them as follows:
-    # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
-  # - name: Citations
-  # - name: Footnotes
-  # - name: Code Blocks
   - name: RankDiv CoEA
-  # - name: Layouts
-  # - name: Other Typography?
+  - name: PDCoEA
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
