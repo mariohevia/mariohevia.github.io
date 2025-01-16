@@ -243,7 +243,7 @@ blockquote {
   padding-right: 7px;
   padding-bottom: 0px;
   margin-bottom: 0;
-  vertical-align: middle;
+  // vertical-align: middle;
   display : block;
 }
 
@@ -627,7 +627,7 @@ figure.highlight {
 }
 
 pre {
-  color: var(--global-theme-color);
+  color: var(--global-code-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
@@ -639,12 +639,56 @@ pre {
 }
 
 code {
-  color: var(--global-theme-color);
+  color: var(--global-code-color);
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
   padding: 3px 3px;
 }
 
+.language-bash .function {
+  color: #3c9100;              
+}
+
+.language-bash .builtin {
+  color: #3c9100;              
+}
+
+.language-bash .string {
+  color: #918300;              
+}
+
+.language-python .keyword {
+  color: #b656d3;
+}
+
+.language-python .comment {
+  color: #528032;
+  font-style: italic;
+}
+
+.language-python .string {
+  color: #d19a66;
+}
+
+/* len() print() */
+.language-python .builtin {
+  color: #d19a66;
+}
+
+/* len() print() */
+.language-python .function {
+  color: var(--global-code-function-color);
+}
+
+/* len() print() */
+.language-python .number {
+  color: #a4e4a2;
+}
+
+/* True False None */
+.language-python .boolean {
+  color: #1680dd; 
+}
 
 // Transitioning Themes
 html.transition,

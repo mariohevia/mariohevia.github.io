@@ -5,6 +5,8 @@
 :root {
   --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
+  --global-code-color: #{$black-color};
+  --global-code-function-color: #{$blue-color};
   --global-text-color: #{$black-color};
   --global-unfocused-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
@@ -41,6 +43,8 @@
 html[data-theme='dark'] {
   --global-bg-color: #{$blue-color-darker};
   --global-code-bg-color: #{$code-bg-color-dark};
+  --global-code-color: #{$grey-color-light};
+  --global-code-function-color: #{$light-yellow-color};
   --global-text-color: #{$grey-color-light};
   --global-unfocused-text-color: #{$grey-color};
   --global-text-color-light: #{$grey-color-light};
