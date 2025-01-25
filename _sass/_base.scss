@@ -2,6 +2,8 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+ @use "variables" as vars;
+
 // Typography
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
@@ -405,11 +407,11 @@ footer.sticky-bottom {
     .page-link {
       color: var(--global-text-color);
       &:hover {
-        color: $black-color;
+        color: vars.$black-color;
       }
     }
     &.active .page-link {
-      color: $white-color;
+      color: vars.$white-color;
       background-color: var(--global-theme-color);
       &:hover {
         background-color: var(--global-theme-color);
@@ -573,7 +575,7 @@ footer.sticky-bottom {
       .badges {
         span {
           display: inline-block;
-          color: $black-color;
+          color: vars.$black-color;
           height: 100%;
           padding-left: 0.5rem;
           vertical-align: middle;

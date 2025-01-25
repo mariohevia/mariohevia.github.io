@@ -2,26 +2,28 @@
  * Themes
  ******************************************************************************/
  
+@use "variables" as vars;
+
 :root {
-  --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-code-color: #{$black-color};
-  --global-code-function-color: #{$blue-color};
-  --global-text-color: #{$black-color};
-  --global-unfocused-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$new-purple-color};
-  --global-hover-color: #{$new-purple-color};
-  --global-navbar-text-color: #{$black-color};
-  --global-navbar-hover-color: #{$new-purple-color};
-  --global-navbar-theme-color: #{$new-purple-color};
-  --global-navbar-bg-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
-  --global-distill-app-color: #{$grey-color};
+  --global-bg-color: #{vars.$white-color};
+  --global-code-bg-color: #{vars.$code-bg-color-light};
+  --global-code-color: #{vars.$black-color};
+  --global-code-function-color: #{vars.$blue-color};
+  --global-text-color: #{vars.$black-color};
+  --global-unfocused-text-color: #{vars.$black-color};
+  --global-text-color-light: #{vars.$grey-color};
+  --global-theme-color: #{vars.$new-purple-color};
+  --global-hover-color: #{vars.$new-purple-color};
+  --global-navbar-text-color: #{vars.$black-color};
+  --global-navbar-hover-color: #{vars.$new-purple-color};
+  --global-navbar-theme-color: #{vars.$new-purple-color};
+  --global-navbar-bg-color: #{vars.$white-color};
+  --global-footer-bg-color: #{vars.$grey-color-dark};
+  --global-footer-text-color: #{vars.$grey-color-light};
+  --global-footer-link-color: #{vars.$white-color};
+  --global-distill-app-color: #{vars.$grey-color};
   --global-divider-color: rgba(0,0,0,.1);
-  --global-card-bg-color: #{$white-color};
+  --global-card-bg-color: #{vars.$white-color};
 
   .fa-sun {
     display : none;
@@ -41,25 +43,25 @@
 }
 
 html[data-theme='dark'] {
-  --global-bg-color: #{$blue-color-darker};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-code-color: #{$grey-color-light};
-  --global-code-function-color: #{$light-yellow-color};
-  --global-text-color: #{$grey-color-light};
-  --global-unfocused-text-color: #{$grey-color};
-  --global-text-color-light: #{$grey-color-light};
-  --global-navbar-text-color: #{$grey-color};
-  --global-navbar-hover-color: #{$new-cyan-color};
-  --global-navbar-theme-color: #{$new-cyan-color};
-  --global-theme-color: #{$new-cyan-color};
-  --global-hover-color: #{$new-cyan-color};
-  --global-navbar-bg-color: #{$blue-color-darker};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
+  --global-bg-color: #{vars.$blue-color-darker};
+  --global-code-bg-color: #{vars.$code-bg-color-dark};
+  --global-code-color: #{vars.$grey-color-light};
+  --global-code-function-color: #{vars.$light-yellow-color};
+  --global-text-color: #{vars.$grey-color-light};
+  --global-unfocused-text-color: #{vars.$grey-color};
+  --global-text-color-light: #{vars.$grey-color-light};
+  --global-navbar-text-color: #{vars.$grey-color};
+  --global-navbar-hover-color: #{vars.$new-cyan-color};
+  --global-navbar-theme-color: #{vars.$new-cyan-color};
+  --global-theme-color: #{vars.$new-cyan-color};
+  --global-hover-color: #{vars.$new-cyan-color};
+  --global-navbar-bg-color: #{vars.$blue-color-darker};
+  --global-footer-bg-color: #{vars.$grey-color-light};
+  --global-footer-text-color: #{vars.$grey-color-dark};
+  --global-footer-link-color: #{vars.$black-color};
+  --global-distill-app-color: #{vars.$grey-color-light};
   --global-divider-color: #424246;
-  --global-card-bg-color: #{$blue-color-darker-light};
+  --global-card-bg-color: #{vars.$blue-color-darker-light};
 
   .fa-sun {
     padding-left: 10px;
