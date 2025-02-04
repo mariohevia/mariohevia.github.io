@@ -246,7 +246,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['Python', 'Big-data', 'empirical analysis', 'theoretical analysis'] # this tags will be dispalyed on the front page of your blog
+display_tags: ['Python', 'Big-data', 'Jax', 'Evolutionary-Computation', 'GPU'] # this tags will be dispalyed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
