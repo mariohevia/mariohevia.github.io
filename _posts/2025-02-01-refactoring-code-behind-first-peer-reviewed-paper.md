@@ -228,7 +228,7 @@ The good news from these results is that the tasks taking the most time can be i
 
 Before we start comparing the runtime of both implementations, we need to ensure that the behaviour of the code remains consistent. Since the algorithms are random, the new implementation uses different libraries (with distinct random generators), and I have rewritten several parts of the code, we can’t expect the exact same results, even with the same random seeds. However, we can still test whether the results are consistent on average by running multiple tests.
 
-Testing with the same algorithm I showed earlier on OneMax for 100 runs with both implementations, I obtained an average of 124,905 function evaluations with the old code and 125,225 function evaluations with the new one. This suggests that the two are likely to have the same behavior and we can continue to comparing their runtime.
+Testing with the same algorithm I showed earlier on OneMax for 100 runs with both implementations, I obtained an average of 125,610 function evaluations with the old code and 125,225 function evaluations with the new one. This suggests that the two are likely to have the same behavior and we can continue to comparing their runtime.
 
 ### Runtime comparisons
 
@@ -246,18 +246,20 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
     37       100         35.3      0.4      0.0              case "solved":
     38     25145    2513597.3    100.0      2.5                  while algorithm.best_fitness<problem.get_max_fitness():
     39     25045   97746846.7   3902.8     96.4                      next(algorithm)
+...
 ```
 
 ##### Old implementation
 ```python
-Total time: 101.373 s
+Total time: 5409.95 s
 
 Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
 ...
-    37       100         35.3      0.4      0.0              case "solved":
-    38     25145    2513597.3    100.0      2.5                  while algorithm.best_fitness<problem.get_max_fitness():
-    39     25045   97746846.7   3902.8     96.4                      next(algorithm)
+    76       100        376.7      3.8      0.0              m_size = max(100 * math.pow(configuration.problem_size,4), 1000000)
+    77     25222       6507.4      0.3      0.0              while not algorithm.solved:
+    78     25122 5409583277.1 215332.5    100.0                  next(algorithm)
+...
 ```
 
 ### Conclusion
