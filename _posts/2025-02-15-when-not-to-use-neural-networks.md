@@ -151,4 +151,4 @@ While neural networks are powerful, they are not always the best choice. Simpler
 
 ##### <span style="opacity: 0.4;"><small>Acknowledgements</small></span>
 
-<span style="opacity: 0.4;"><small>I would like to thank my data scientist friend [Aldo Encarnacion](https://www.linkedin.com/in/aldo-segura/), as it was through our discussions that the idea for this blog post was born.</small></span>
+<span style="opacity: 0.4;"><small>I would like to thank my friend [Aldo Encarnacion](https://www.linkedin.com/in/aldo-segura/) and my wife [Jagoda Hevia Karpowicz](https://www.linkedin.com/in/jagoda-karpowicz/), as it was through our discussions that the idea for this blog post was born.</small></span>
