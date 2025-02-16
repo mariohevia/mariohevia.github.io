@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: "When Not to Use Neural Networks"
-date: 2025-02-01
+date: 2025-02-15
 description: While neural networks are powerful, they aren't always the best tool for the job. This post explores cases where simpler models outperform them, with Python code snippets and experiments.
 tags: Python Machine-Learning Neural-Networks Decision-Trees SVM
 categories: 
