@@ -12,11 +12,14 @@ authors:
       name: University of Birmingham
 
 toc:
-  - name: Introduction
-  - name: When Simplicity Wins
-  - name: "Data Preparation"
-  - name: "Example 2: High-dimensional data"
-  - name: "Other things to consider with NNs"
+  - name: Data Preparation
+  - name: Data Splitting
+  - name: Feature Engineering
+  - name: Model Selection
+  - name: Model Training
+  - name: Model Evaluation
+  - name: Model Interpretation
+  - name: Other things to consider
   - name: Conclusions
 ---
 
