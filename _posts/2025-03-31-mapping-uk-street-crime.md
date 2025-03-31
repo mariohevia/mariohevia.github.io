@@ -23,6 +23,9 @@ Lately, some friends and I have been thinking about buying houses, and one of th
 
 Since I couldn’t find exactly what I was looking for, I decided to build it myself. My [website](https://crimedatauk.streamlit.app/) uses UK police crime data to map out street-level crime. You can click on the map using postcodes or draw custom areas to see detailed crime stats. My goal was to make something simple, free, and actually useful for people who want to buy a house and care about safety in their neighborhoods.
 
+{: style="text-align:center"}
+[![Crime data app](../../../assets/img/blog_images/2025-03-31-mapping-uk-street-crime/app_preview.png){: style="max-width: 100%; height: auto;"}](https://crimedatauk.streamlit.app/)
+
 In this post, I will walk you through how I built the web app and share some features I plan to add in the future.
 
 ### Building the App with Streamlit
