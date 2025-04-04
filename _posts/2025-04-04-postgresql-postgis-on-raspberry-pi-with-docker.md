@@ -24,6 +24,9 @@ For my crime mapping project, one of the biggest performance bottlenecks was pul
 
 Rather than using a laptop 24/7 or paying for a cloud server, I used a Raspberry Pi 4 I had lying around. It’s cheap, quiet, and perfect for running a lightweight server at home. In this post, I will walk through my exact setup so you can replicate it.
 
+{: style="text-align:center"}
+![PostgreSQL + PostGIS on Raspberry Pi with Docker](../../../assets/img/blog_images/2025-04-04-postgresql-postgis-on-raspberry-pi-with-docker/rpi-pg-docker-post-logo.png){: style="max-width: 75%; height: auto;"}
+
 ### Why a Local Database?
 
 My app used to fetch data dynamically from the UK Police. But:
