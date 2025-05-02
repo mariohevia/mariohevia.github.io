@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: "Flood Detection in Remote Sensing Images: The importance of Data Augmentation"
+title: "Flood Detection in Remote Sensing Images"
 date: 2025-05-02
 description: In this post, I explore how to implement flood detection models trained on drone imagery. Based on recent research using the BlessemFlood21 dataset, I walk through the process of preparing the dataset and training the neural networks.
 tags: Deep-Learning Flood-Detection Remote-Sensing Semantic-Segmentation
