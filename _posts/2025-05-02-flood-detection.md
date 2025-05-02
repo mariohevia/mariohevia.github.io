@@ -23,13 +23,13 @@ toc:
 
 Climate change has increased the number and intensity of natural disasters worldwide, including across Europe. Among them, floods are particularly brutal. I had firsthand experience when my hometown flooded overnight, destroying houses and cars. Seeing it up close made the problem feel a lot less abstract.
 
-The good news is that technology has come a long way, and researchers are now working hard to build better tools for flood detection, which could help warn people and coordinate humanitarian aid during future flood events. Recently, I have been reading a few papers to understand how these systems work. But reading is not enough, so I decided to implement these papers ideas. 
+The good news is that technology has come a long way, and researchers are now working hard to build better tools for flood detection, which could help warn people and coordinate humanitarian aid during future flood events. Recently, I have been reading a few papers to understand how these systems work. But reading is not enough, so I decided to implement the ideas from these papers.
 
-In this post I will use the [BlessemFlood21](https://arxiv.org/abs/2407.05007) dataset for flood detection (semantic segmentation).  I note that the authors of the paper do not provide code so I will code everything from scratch and some of the decisions I will make might be different from the authors of these papers.
+In this post, I will use the [BlessemFlood21](https://arxiv.org/abs/2407.05007) dataset for flood detection (semantic segmentation). The authors of the paper do not provide any code, so I will implement everything from scratch. Some of the decisions I make may differ from those made by the authors. All the code for this blog post can be found [here](https://github.com/mariohevia/flood_detection_aug).
 
 ### Setting Up the Environment 
 
-The first thing we need to do is install the libraries that we will use. As always, I recommend creating a new environment first and installing everything inside it. Use the following commands to install the packages:
+The first thing we need to do is install the libraries we will be using. As always, I recommend creating a new environment first and installing everything inside it. Use the following commands to install the required packages:
 
 ```bash
 uv venv envFloodDetect
@@ -48,16 +48,16 @@ We also need to download the dataset from [https://fordatis.fraunhofer.de/handle
 
 ### Dataset
 
-The imagery in the [BlessemFlood21](https://arxiv.org/abs/2407.05007) dataset was acquired during the 2021 Erftstadt-Blessem flooding. It includes an  georeferenced RGB image (~3.2 GB) supplemented with a water mask (~21,55 MB). In order to understand how it looks like, I opened it using QGIS (an open-source geographic information system software). Below I show you the complete image/dataset on the left and the mask overlaid into the image on the right.
+The imagery in the [BlessemFlood21](https://arxiv.org/abs/2407.05007) dataset was acquired during the 2021 Erftstadt-Blessem flooding. It includes a georeferenced RGB image (~3.2 GB), supplemented with a water mask (~21.55 MB). To understand what it looks like, I opened it using QGIS (an open-source geographic information system software). Below, I show the complete image/dataset on the left and the mask overlaid on the image on the right.
 
 <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
   <img src="../../../assets/img/blog_images/2025-05-02-flood-detection/complete_dataset.png" alt="Complete dataset" style="max-width: 45%; height: auto;" />
   <img src="../../../assets/img/blog_images/2025-05-02-flood-detection/masked_dataset.png" alt="Masked dataset" style="max-width: 45%; height: auto;" />
 </div>
 
-If you do not have QGIS you would need to do all this directly in python. We need to take into consideration that the images are very large and QGIS opens them efficiently (without loading the whole image into RAM). To do this it opens the image either with lower resolution, using windows (clipping the image) or both together.
+If you do not have QGIS, you will need to do all of this directly in Python. It’s important to keep in mind that the images are very large, and QGIS handles them efficiently by avoiding loading the entire image into RAM. It does this by opening the image at a lower resolution, using windows (i.e., clipping the image), or both.
 
-To replicate the outputs above we need to do the same in python (or load the entire image in RAM which could cause problems). For that I will use the `rasterio` library. 
+To replicate the outputs above, we need to do the same in Python (or load the entire image into RAM, which could cause problems). For this, I’ll use the `rasterio` library.
 
 ```python
 import numpy as np
@@ -93,11 +93,13 @@ After plotting the loaded image we obtain the following.
 {: style="text-align:center"}
 ![Python image load](../../../assets/img/blog_images/2025-05-02-flood-detection/initial_load.png){: style="max-width: 100%; height: auto;"}
 
-The first thing to notice is that still the QGIS image and the python image do not look the same, the python one seems brighter. This is because the image comes in `uint16` instead of the standard `uint8` used by `matplotlib` making it look brighter since `matplotlib` clips any pixel values above `255` to `255`. You might think that scaling from `0-65,535` to `0-255` (or `0-1` since we plan to use it for DL) would solve the problem and in theory it would, but for this dataset you would obtain an almost pitch black image. 
+The first thing to notice is that the QGIS image and the Python-rendered image still do not look the same, the Python one appears brighter. This is because the image comes in `uint16` format instead of the standard `uint8` used by `matplotlib`. As a result, `matplotlib` clips any pixel values above `255` to `255`, making the image look overly bright.
 
-This is because the actual pixel values in the `uint16` image do not span the full range up to 65,535. This is common in remote sensing and low-light imaging, where the dynamic range is often compressed. Following what the authors of the dataset did in their publication (and similarly QGIS does automatically), we normalise pixel values within the 2nd and 98th percentiles.
+You might think that scaling from `0–65,535` to `0–255` (or `0–1`, since we plan to use it for deep learning) would solve the problem, and in theory, it would. But for this dataset, doing that results in an almost pitch-black image.
 
-To compute the percentiles, we have three options, load all the image at once, load the image in small parts (tiles) or use the lower resolution version to compute these percentiles. I believe most of the time using the lower resolution version is enough, but to show that it works for this dataset, I also loaded the image all at once and compared the results.
+This happens because the actual pixel values in the `uint16` image do not span the full range up to `65,535`. This is common in remote sensing and low-light imaging, where the dynamic range is often compressed. Following what the authors of the dataset did in their publication (and what QGIS does automatically), we normalise the pixel values using the 2nd and 98th percentiles.
+
+To compute the percentiles, we have three options: load the entire image at once, load the image in small parts (tiles), or use the lower-resolution version to compute them. I believe that using the lower-resolution version is sufficient most of the time, but to confirm this for this dataset, I also loaded the full-resolution image and compared the results.
 
 ```python
 with rasterio.open(rgb_file_path) as src:
@@ -133,12 +135,12 @@ Blue 2nd and 98th percentiles: 0.0, 293.0
 98th percentiles: [515. 465. 294.]
 ```
 
-And using these percentiles to normalise the image we finally obtain a good image that looks like the one from QGIS.
+By using these percentiles to normalise the image, we finally obtain a good image that looks similar to the one from QGIS.
 
 {: style="text-align:center"}
 ![Python image load](../../../assets/img/blog_images/2025-05-02-flood-detection/final_load.png){: style="max-width: 60%; height: auto;"}
 
-The last thing that we need to be able to do is load matching tiles of both the dataset image and the mask, so that we can use them for training and testing. Here I load a random tile, but later on we will load them based on a grid, to avoidreapeating images or using parts of the training images in testing.
+The last thing we need to be able to do is load matching tiles from both the dataset image and the mask, so that we can use them for training and testing. Here, I load a random tile, but later on we will load them based on a grid to avoid repeating images or using parts of the training images in testing.
 
 ```python
 from rasterio.windows import Window
@@ -196,8 +198,7 @@ model = smp.DeepLabV3Plus(
     activation="sigmoid"
 )
 ```
-
-There are some other things to consider for this model. First, the model expects tensors with the shape `(batch_size, channels, height, width)`, and it relies on pixel values being normalised using the specific ImageNet statistics with a mean of `[0.485, 0.456, 0.406]` and a standard deviation of `[0.229, 0.224, 0.225]`. Assuming that `final_img` comes from the code in the last section, we can adjust the image with this:
+There are some other things to consider for this model. First, the model expects tensors with the shape `(batch_size, channels, height, width)`, and it relies on pixel values being normalised using specific ImageNet statistics: a mean of `[0.485, 0.456, 0.406]` and a standard deviation of `[0.229, 0.224, 0.225]`. Assuming that `final_img` comes from the code in the last section, we can adjust the image with the following:
 
 ```python
 # Normalise and transform to tensor for DL model
@@ -207,7 +208,7 @@ preprocessed_img = (final_img - mean) / std
 tensor_img = torch.tensor(preprocessed_img).float()
 ```
 
-Then we can already create an inference function, although it will not return any useful information, since the model has not been trained yet.
+Next, we can go ahead and create an inference function, although it will not return any useful results yet, since the model has not been trained yet.
 
 ```python
 def predict(image, device="cuda"):
@@ -237,11 +238,11 @@ prediction_plt = np.transpose(predictions[0].cpu().numpy(), (1, 2, 0))
 
 ### Training the Model
 
-To train the model we need to first create a `Dataset` class from `torch.utils.data` loading the image into small tiles, normalised properly and everything we did in the [Dataset](#dataset) section. This is a little bit more complicated (and long), so I will describe the code briefly, and you can look at it at your own pace below.
+To train the model, we first need to create a `Dataset` class from `torch.utils.data` to load the image into small tiles, normalise them, and everything we did in the [Dataset](#dataset) section. This is a bit more complicated (and lengthy), so I will describe the code briefly, and you can review it at your own pace below.
 
-I created the `TiledDataset` class which receives the two `.tif` files and can output several tiles in batches with the use of `DataLoader`. When the class is initialised, it first obtains the 2nd and 98th percentile values from the image as we did before. Then it creates a list of all the top-left coordinates of each tile, checking wether the mask indicates whether it has water or not and that the tile is not completely black. Afterwards it splits the data into training, validation and testing (80% - 10% - 10%), ensuring that there is a proportional number of water-containing tiles in each split, to ensure diversity across these subsets.
+I created the `TiledDataset` class, which takes the two `.tif` files and can output several tiles in batches using `DataLoader`. When the class is initialised, it first computes the 2nd and 98th percentile values from the image, just as we did before. Then, it creates a list of all the top-left coordinates of each tile, checking whether the mask indicates the presence of water and ensuring that the tile is not completely black. Afterward, it splits the data into training, validation, and testing sets (80% - 10% - 10%), ensuring that each split contains a proportional number of water-containing tiles for diversity across the subsets.
 
-When requesting an image from the class, it takes the top-left coordinates of the tile requested, loads the image and normalises it first with the percentiles and later normalises it based on the ImageNet requirements to make our data compatible with the pre-trained encoder.
+When requesting an image from the class, it takes the top-left coordinates of the tile, loads the image, and normalises it first with the percentiles, then based on the ImageNet statistics to make our data compatible with the pre-trained encoder.
 
 <div class="code-container">
   <input type="checkbox" id="code-toggle-2" class="code-toggle-control">
@@ -403,7 +404,7 @@ class TiledDataset(Dataset):
   </div>
 </div>
 
-Once we have the dataset ready we can train the neural network. Once again this is relatively a lot of code, but it is fairly standard training procedure once the dataset is loaded. I leave the code below for completeness, but I will not explain it further.
+Once we have the dataset ready, we can train the neural network. Once again, this involves quite a bit of code, but it follows a fairly standard training procedure once the dataset is loaded. I include the code below for completeness, but I will not explain it further.
 
 <div class="code-container">
   <input type="checkbox" id="code-toggle-1" class="code-toggle-control">
@@ -544,7 +545,7 @@ if __name__ == '__main__':
 
 ### Results
 
-After training, the model showed promising results on the validation set. I still needed to evaluate it on the test set, as the models were selected based on their validation performance. Using IoU, Dice, and accuracy as metrics, the model achieved an average IoU of 89.99%, Dice score of 94.73%, and accuracy of 99.56%. These results indicate strong performance in both segmentation quality and pixel-wise classification. Interestingly, the model appears to outperform what is reported in [Polushko et al. (2024)](https://arxiv.org/abs/2407.05007) and [Polushko et al. (2025)](https://arxiv.org/abs/2504.20203); however, since these papers do not share their code, it's difficult to inspect what changes may have led to the performance difference.
+After training, the model showed promising results on the validation set. I still needed to evaluate it on the test set, as the models were selected based on their validation performance. Using IoU, Dice, and accuracy as metrics, the model achieved an average IoU of 89.99%, a Dice score of 94.73%, and an accuracy of 99.56%. These results indicate strong performance in both segmentation quality and pixel-wise classification. Interestingly, the model appears to outperform what is reported in [Polushko et al. (2024)](https://arxiv.org/abs/2407.05007) and [Polushko et al. (2025)](https://arxiv.org/abs/2504.20203); however, since these papers do not share their code, it’s difficult to determine what changes may have led to the performance difference.
 
 Once again, the code for testing is fairly straightforward, so I will not explain it. But, I will share an image showing the predicted mask (middle) versus the real mask (right).
 
