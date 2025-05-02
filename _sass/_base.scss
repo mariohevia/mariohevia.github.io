@@ -647,6 +647,66 @@ code {
   padding: 3px 3px;
 }
 
+/* Pure CSS collapsible code block */
+.code-container {
+  overflow: hidden;
+}
+
+/* Hide the checkbox but use it as state controller */
+.code-toggle-control {
+  display: none;
+}
+
+/* Style for the toggle button (label) */
+.code-toggle-label {
+  color: var(--global-text-color);
+  border: 1px solid var(--global-text-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.code-toggle-label::after {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+/* Style for the collapsible content (hidden by default) */
+.code-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+
+.code-content pre {
+  color: var(--global-code-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  pre, code {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+.code-content code {
+  color: var(--global-code-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 3px;
+  padding: 3px 3px;
+}
+
+/* Show content when checkbox is checked */
+.code-toggle-control:checked ~ .code-content {
+  height: auto;
+}
+
 .language-bash .function {
   color: #3c9100;              
 }
@@ -690,6 +750,16 @@ code {
 /* True False None */
 .language-python .boolean {
   color: #1680dd; 
+}
+
+/* Changes line spacing in python code*/ 
+.language-python pre, pre.language-python, .highlight pre.language-python {
+  line-height: 1.3; /* Reduce from default (often 1.5 or 1.6) */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.language-python code {
+  line-height: 1.3; /* Ensure code inside also has reduced spacing */
 }
 
 // Transitioning Themes
