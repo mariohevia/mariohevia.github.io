@@ -36,7 +36,7 @@ uv venv envFloodDetect
 source envFloodDetect/bin/activate
 uv pip install torch torchvision matplotlib rasterio
 ```
-If you are not familiar with `uv` or don't use it, you can install the packages with this instead:
+If you are not familiar with `uv` or don't use it, you can install the packages with this instead: 
 
 ```bash
 python -m venv envFloodDetect
