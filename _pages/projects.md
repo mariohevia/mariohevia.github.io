@@ -2,11 +2,11 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
-nav: false
-nav_order: 2
-display_categories: [work, fun]
-horizontal: false
+description: A curated overview of my professional, open-source, and personal data science projects.
+nav: true
+nav_order: 1
+display_categories: [Professional, Open Source (Owner), Open Source (Contributions), Personal Data Science Projects]
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
