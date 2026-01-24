@@ -3,7 +3,7 @@ layout: page
 title: Predicting Bike Sharing Demand
 description: A regression model to forecast hourly bike-sharing demand using weather and temporal features.
 img: assets/img/project_images/bike_sharing_demand.png
-importance: 1
+importance: 2
 category: Personal Data Science Projects
 ---
 
@@ -25,7 +25,7 @@ Built a semantic-segmentation pipeline using DeepLabV3+ to identify flooded regi
     Photo “Bikes on Frederiksberg Allé in the Rain, Copenhagen, Denmark” by <a href="https://www.flickr.com/photos/kristoffer-trolle/38758323610/" target="_blank">Kristoffer Trolle</a>, licensed under CC BY 2.0.
 </div>
 
-**Project description**
+### **Project description**
 
 This project develops a predictive model for bike-sharing usage by combining historical weather data and temporal information to estimate the number of bike rentals in a given hour. The analysis uses an open bike-sharing dataset containing hourly counts of rentals alongside weather variables and seasonal factors.
 

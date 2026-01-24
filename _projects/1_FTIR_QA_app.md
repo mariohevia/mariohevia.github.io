@@ -23,7 +23,7 @@ The FTIR Spectroscopy Quality Assurance Tool automates checks on absorbance, sig
     Example view of the FTIR Quality Assurance tool with a sample spectrum loaded.
 </div>
 
-**Project description**
+### **Project description**
 
 This project is a standalone quality assurance tool for FTIR (Fourier-transform infrared) spectroscopy data, designed for day-to-day use by lab technicians. The application provides an end-to-end workflow for loading spectral data, running automated quality checks, visualising results, and exporting a structured report.
 

@@ -25,7 +25,7 @@ Built a semantic-segmentation pipeline using DeepLabV3+ to identify flooded regi
     Complete BlessemFlood21 image/dataset with the mask of flooded areas overlaid.
 </div>
 
-**Project description**
+### **Project description**
 
 This project implements a flood detection system for remote-sensing imagery using deep learning semantic segmentation. It is built around the BlessemFlood21 dataset, which contains high-resolution RGB images and corresponding water masks from a real flood event. The goal is to train a model that can identify flooded areas in large aerial images by learning pixel-wise labels.
 

@@ -19,7 +19,7 @@ Added the missing dice values to the Backgammon observation tensor in OpenSpiel.
 </div>
 </div>
 
-**Contribution details**
+### **Contribution details**
 
 The [OpenSpiel repository](https://github.com/google-deepmind/open_spiel) (DeepMind’s reinforcement-learning games framework) is a research-oriented framework providing environments and algorithms for reinforcement learning in games. It supports many games, including Backgammon, where agents interact via encoded state vectors used for training and evaluation.
 
