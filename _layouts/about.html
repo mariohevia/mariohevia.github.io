@@ -46,6 +46,21 @@ layout: default
             {%- include news.html %}
           {%- endif %}
 
+          <!-- Selected projects -->
+          {% if page.projects -%}
+            <h2><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">Featured Projects</a></h2>
+
+            {%- assign featured_projects = site.projects | where: "featured_home", true | sort: "importance" -%}
+
+            <div class="container">
+              <div class="row row-cols-2">
+                {%- for project in featured_projects -%}
+                  {% include projects_horizontal.html %}
+                {%- endfor %}
+              </div>
+            </div>
+          {%- endif %}
+          
           <!-- Selected papers -->
           {% if page.selected_papers -%}
             <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></h2>

@@ -5,6 +5,8 @@ description: Semantic segmentation model detecting flooded areas in aerial image
 img: assets/img/project_images/flood_detection.png
 importance: 1
 category: Personal Data Science Projects
+github: https://github.com/mariohevia/flood_detection_aug
+featured_home: true
 ---
 
 Built a semantic-segmentation pipeline using DeepLabV3+ to identify flooded regions in high-resolution aerial images from the BlessemFlood21 dataset, including data preprocessing, model training, and performance evaluation.

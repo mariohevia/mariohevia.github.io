@@ -1,22 +1,30 @@
 <div class="card-item col">
-  {%- if project.redirect -%}
-  <a href="{{ project.redirect }}">
-  {%- else -%}
-  <a href="{{ project.url | relative_url }}">
-  {%- endif -%}
     <div class="card hoverable">
       <div class="row g-0">
+        {%- assign project_href = project.redirect | default: project.url | relative_url -%}
+  
         {%- if project.img -%}
         <div class="card-img col-md-6">
-          {% include figure.html path=project.img alt="project thumbnail" %}
+          <a href="{{ project_href }}">
+            {% include figure.html path=project.img alt="project thumbnail" %}
+          </a>
         </div>
         <div class="col-md-6">
         {%- else -%}
         <div class="col-md-12">
         {%- endif -%}
+  
           <div class="card-body">
-            <h3 class="card-title">{{ project.title }}</h3>
-            <p class="card-text">{{ project.description }}</p>
+            <h3 class="card-title">
+              <a href="{{ project_href }}">{{ project.title }}</a>
+            </h3>
+  
+            <p class="card-text">
+              <a href="{{ project_href }}" style="color: inherit; text-decoration: none;">
+                {{ project.description }}
+              </a>
+            </p>
+  
             <div class="row ml-1 mr-1 p-0">
               {%- if project.github -%}
               <div class="github-icon">
@@ -32,9 +40,10 @@
               </div>
               {%- endif -%}
             </div>
+  
           </div>
         </div>
       </div>
     </div>
-  </a>
-</div>
+  </div>
+  

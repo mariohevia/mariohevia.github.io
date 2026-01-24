@@ -5,6 +5,8 @@ description: An end-to-end spatial analytics platform to visualise UK street cri
 img: assets/img/project_images/mapping_uk_street_crime.png
 importance: 2
 category: Open Source (Owner)
+github: https://github.com/mariohevia/crime_data_uk/
+featured_home: true
 ---
 
 Built an end-to-end spatial analytics platform to visualise UK street crime data: ingesting datasets into a PostgreSQL/PostGIS database on a Raspberry Pi via Docker, performing spatial queries, and producing interactive crime maps. Read more in the blog posts:
