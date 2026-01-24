@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mapping UK Street Crime
-description: An end-to-end spatial analytics platform to visualise UK street crime data with PostgreSQL/PostGIS on Raspberry Pi.
+description: An open-source end-to-end spatial analytics platform to visualise UK street crime data using PostgreSQL/PostGIS on a Raspberry Pi.
 img: assets/img/project_images/mapping_uk_street_crime.png
 importance: 2
 category: Open Source (Owner)
