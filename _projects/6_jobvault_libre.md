@@ -5,7 +5,7 @@ description: An open-source desktop application for managing job applications lo
 img: assets/img/project_images/jobvault_libre.png
 importance: 0
 category: Open Source (Owner)
-github: https://github.com/mariohevia/crime_data_uk/
+github: https://github.com/mariohevia/JobVault-Libre/
 featured_home: true
 ---
 
