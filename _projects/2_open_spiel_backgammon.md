@@ -13,7 +13,7 @@ Added the missing dice values to the Backgammon observation tensor in OpenSpiel.
     <div style="width: 40%; margin: 0 auto;">
     {% include figure.html
        path="assets/img/project_images/open_spiel_backgammon.png"
-       title="FTIR QA App"
+       title="Open Spiel Backgammon"
        class="img-fluid rounded z-depth-1"
     %}
 </div>

@@ -16,7 +16,7 @@ Built a semantic-segmentation pipeline using DeepLabV3+ to identify flooded regi
     <div style="width: 40%; margin: 0 auto;">
     {% include figure.html
        path="assets/img/project_images/bike_sharing_demand.jpg"
-       title="FTIR QA App"
+       title="Bike Sharing Demand"
        class="img-fluid rounded z-depth-1"
     %}
 </div>
